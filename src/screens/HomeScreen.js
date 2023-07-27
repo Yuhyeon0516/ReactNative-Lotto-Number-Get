@@ -1,11 +1,10 @@
 import { View } from "react-native";
-import React, { useCallback, useState } from "react";
+import React, { useCallback } from "react";
 import { Header } from "../components/Header/Header";
 import { Spacer } from "../components/Spacer";
 import { CustomButton } from "../components/CustomButton";
 import { Typography } from "../components/Typography";
 import LottoNumberView from "../components/LottoNumberView";
-import { getRandomSixNumber } from "../util/util";
 import { useDispatch, useSelector } from "react-redux";
 import { createNewNumbers } from "../action/lottoNumbers";
 
@@ -38,7 +37,7 @@ export default function HomeScreen() {
         <CustomButton onPress={onPressGetNumber}>
           <View style={{ backgroundColor: "black", paddingVertical: 24, alignItems: "center" }}>
             <Typography color="white" fontSize={18}>
-              로또 번호 추출하기
+              Get Lotto Numbers
             </Typography>
           </View>
         </CustomButton>

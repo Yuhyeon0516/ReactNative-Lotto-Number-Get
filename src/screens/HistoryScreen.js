@@ -1,5 +1,5 @@
-import { View, Text, FlatList } from "react-native";
-import React, { useCallback, useState } from "react";
+import { View, FlatList } from "react-native";
+import React from "react";
 import { Header } from "../components/Header/Header";
 import { Typography } from "../components/Typography";
 import LottoNumberView from "../components/LottoNumberView";
@@ -20,9 +20,7 @@ export default function HistoryScreen() {
         renderItem={({ item }) => {
           return (
             <View style={{ paddingHorizontal: 20, paddingVertical: 12, marginHorizontal: 24, height: 120, backgroundColor: "white" }}>
-              <Typography fontSize={16}>
-                {item.date.getFullYear()}. {item.date.getMonth() + 1}. {item.date.getDate()}
-              </Typography>
+              <Typography fontSize={16}>{item.date}</Typography>
               <LottoNumberView numbers={item.numbers} />
             </View>
           );

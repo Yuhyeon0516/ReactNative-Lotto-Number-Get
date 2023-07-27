@@ -7,10 +7,17 @@ const defaultState = {
 
 export function lottoNumberReducer(state = defaultState, action) {
   if (action.type === CREATE_NEW_NUMBERS) {
+    const date = new Date();
     return {
       ...state,
       currentNumber: action.numbers,
-      history: [{ date: new Date(), numbers: action.numbers }, ...state.history],
+      history: [
+        {
+          date: `${date.getFullYear()}. ${date.getMonth() + 1}. ${date.getDate()} ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`,
+          numbers: action.numbers,
+        },
+        ...state.history,
+      ],
     };
   }
 
