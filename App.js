@@ -1,8 +1,17 @@
-import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { NavigationContainer } from "@react-navigation/native";
+import { StyleSheet } from "react-native";
+import { SafeAreaProvider } from "react-native-safe-area-context";
+import TabNavigation from "./src/navigation/TabNavigation";
 
 export default function App() {
-  return <View style={styles.container}></View>;
+  return (
+    <SafeAreaProvider>
+      <NavigationContainer>
+        <TabNavigation />
+      </NavigationContainer>
+    </SafeAreaProvider>
+  );
 }
 
 const styles = StyleSheet.create({
