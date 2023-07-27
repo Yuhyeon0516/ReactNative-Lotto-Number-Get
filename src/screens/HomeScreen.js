@@ -6,12 +6,15 @@ import { CustomButton } from "../components/CustomButton";
 import { Typography } from "../components/Typography";
 import LottoNumberView from "../components/LottoNumberView";
 import { getRandomSixNumber } from "../util/util";
+import { useDispatch, useSelector } from "react-redux";
+import { createNewNumbers } from "../action/lottoNumbers";
 
 export default function HomeScreen() {
-  const [numbers, setnumbers] = useState([]);
+  const numbers = useSelector((state) => state.numbers.currentNumber);
+  const dispatch = useDispatch();
+
   const onPressGetNumber = useCallback(() => {
-    const randomNumbers = getRandomSixNumber();
-    setnumbers(randomNumbers);
+    dispatch(createNewNumbers());
   }, []);
 
   return (
