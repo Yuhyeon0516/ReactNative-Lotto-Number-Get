@@ -6,3 +6,8 @@ If you click "Get Lotto Numbers" button in home screen, you will get six lotto n
 Also, You can see lotto numbers getting history so far in History screen.
 
 # Result
+
+![Result](https://github.com/Yuhyeon0516/ReactNative-LottoNumber/assets/120432007/491a372d-adc8-46aa-94b3-f1c08a071110)
+
+
+
